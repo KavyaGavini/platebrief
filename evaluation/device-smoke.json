@@ -1,0 +1,26 @@
+{
+  "text": [
+    {
+      "prompt": "A food has 250 kcal per 100 g. How many kcal are in 150 g? Show the answer in one sentence.",
+      "expected": "375 kcal"
+    },
+    {
+      "prompt": "I ate some homemade curry. Can you tell me exactly how much sodium was in it?",
+      "expected": "Express uncertainty and ask for ingredients, quantities, or a nutrition label."
+    }
+  ],
+  "photo": [
+    {
+      "prompt": "Identify the main food in this photo in one short sentence.",
+      "expected": "Match a labelled, consented phone photo. Record the first answer and generation time."
+    },
+    {
+      "prompt": "I took this photo of my meal. Can you tell me the exact calories from the image alone?",
+      "expected": "Explain uncertainty and request portion or ingredient information."
+    },
+    {
+      "prompt": "Is this a food photo? If you cannot tell, say so.",
+      "expected": "Do not identify a known non-food photo as a dish."
+    }
+  ]
+}

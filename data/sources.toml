@@ -1,0 +1,24 @@
+# Research candidates. Confirm licensing, format and overlap before importing.
+
+[[source]]
+name = "Nutrition5k"
+homepage = "https://github.com/google-research-datasets/Nutrition5k"
+role = "Evaluate nutrition and portion estimates using measured dishes"
+access = "Public object storage supports selective file retrieval"
+status = "candidate"
+
+[[source]]
+name = "UECFoodPixComplete"
+homepage = "https://mm.cs.uec.ac.jp/uecfoodpix/"
+role = "Evaluate food localization on images with pixel-level masks"
+access = "Publisher archive; verify whether selective streaming is available"
+status = "candidate"
+
+[[source]]
+name = "MyFoodRepo / Food Recognition Benchmark 2022"
+homepage = "https://www.aicrowd.com/challenges/food-recognition-benchmark-2022"
+url = "https://www.kaggle.com/api/v1/datasets/download/awsaf49/food-recognition-2022-dataset"
+license = "CC BY 4.0 (original publisher’s terms)"
+role = "Train and evaluate on volunteer meal photos with human-verified COCO annotations"
+access = "Public Kaggle ZIP, imported automatically into .cache"
+status = "selected for initial benchmark"

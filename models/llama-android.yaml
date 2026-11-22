@@ -1,0 +1,104 @@
+base:
+  model_class: llama3
+  params: models/llama-weights/params.json
+  checkpoint: models/llama-weights/consolidated.00.pth
+  lora_config: null
+  tokenizer_path: models/llama-weights/tokenizer.model
+  metadata: null
+  use_lora: 0
+  preq_mode: null
+  preq_group_size: 32
+  preq_embedding_quantize: 8,0
+model:
+  dtype_override: fp32
+  enable_dynamic_shape: true
+  use_shared_embedding: false
+  use_sdpa_with_kv_cache: true
+  expand_rope_table: false
+  use_attention_sink: null
+  output_prune_map: null
+  input_prune_map: null
+  use_kv_cache: true
+  quantize_kv_cache: false
+  static_quantize_kv_cache: false
+  static_quantize_kv_cache_scale: 0.007874015748031496
+  local_global_attention: null
+  use_moe_quantized_op: false
+export:
+  max_seq_length: 1024
+  max_context_length: 1024
+  output_dir: artifacts/platebrief-llama
+  output_name: platebrief-llama.pte
+  so_library: null
+  export_only: false
+  foundation_weights_file: null
+  lora_weights_file: null
+debug:
+  profile_memory: false
+  profile_path: null
+  generate_etrecord: false
+  generate_full_logits: false
+  verbose: false
+multimethod:
+  methods: []
+  share_mutable_buffers: false
+quantization:
+  qmode: 8da4w
+  embedding_quantize: 4,32
+  pt2e_quantize: null
+  group_size: null
+  use_spin_quant: null
+  use_qat: false
+  quantize_scope: full
+  calibration_tasks: null
+  calibration_limit: null
+  calibration_seq_length: null
+  calibration_data: Once upon a time
+  use_hqq: true
+backend:
+  xnnpack:
+    enabled: true
+    extended_ops: false
+    enable_bf16: false
+  coreml:
+    enabled: false
+    enable_state: false
+    preserve_sdpa: false
+    quantize: null
+    ios: 15
+    compute_units: cpu_only
+  vulkan:
+    enabled: false
+    force_fp16: false
+  qnn:
+    enabled: false
+    use_sha: false
+    soc_model: SM8650
+    use_qnn_sha: false
+    optimized_rotation_path: null
+    num_sharding: 0
+  openvino:
+    enabled: false
+    device: CPU
+    nncf_compression_group_size: 32
+    openvino_awq: false
+    openvino_scale_estimation: false
+  torchao:
+    use_torchao_kernels_linear: false
+    use_torchao_kernels_tied_embedding: false
+  tosa:
+    enabled: false
+    version: TOSA-1.0+INT
+  ethosu:
+    enabled: false
+    target: ethos-u85-128
+    memory_mode: default
+    system_config: default
+    extra_flags: []
+  vgf:
+    enabled: false
+    compile_spec: TOSA-1.0+INT
+    compiler_flags: []
+    quantize_scope: full
+  mlx:
+    enabled: false
